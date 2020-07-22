@@ -28,9 +28,10 @@ public class RikhsawController {
     }
 
     @RequestMapping(value = "getrating/{telePhoneNumber}")
-    ResponseEntity<String> getUserRatingByTelephoneNumber(@PathVariable String telePhoneNumber){
+    ResponseEntity<String> getUserRatingByTelephoneNumber(@PathVariable String telePhoneNumber) {
         return rikhsawService.getRatingByTelephoneNumber(telePhoneNumber);
     }
+
     @RequestMapping(value ="updateRating/{telePhoneNumber}/{rating}",method = RequestMethod.PUT)
     ResponseEntity<String>updateRatingByTelePhoneNumber(@PathVariable String telePhoneNumber,@PathVariable Integer rating) throws Exception{
         try {

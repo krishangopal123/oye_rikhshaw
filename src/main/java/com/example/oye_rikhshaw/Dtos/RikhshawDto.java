@@ -13,7 +13,10 @@ public class RikhshawDto {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", updatable = false, nullable = false)
     private Integer Id;
-
+    @Column(name = "telephoneNumber", unique = true, nullable = false)
+    private String telephoneNumber;
+    private Integer totalRatingsValue;
+    private Integer totalUserGivenRatings;
 
     public String getTelephoneNumber() {
         return telephoneNumber;
@@ -42,10 +45,5 @@ public class RikhshawDto {
     public Integer getId() {
         return Id;
     }
-    @Column(name="telephoneNumber",unique = true,nullable = false)
-    private String telephoneNumber;
-
-    private Integer totalRatingsValue;
-    private Integer totalUserGivenRatings;
 
 }
